@@ -1,13 +1,11 @@
 from collections import Counter
 
-
 class Node:
     def __init__(self, value):
         self.value = value
         self.left = None
         self.right = None
         self.height = 0
-
 
 class BinaryTree:
     def __init__(self):
@@ -30,7 +28,6 @@ class BinaryTree:
 
     def delete_root(self):
         self.root = None
-
 
 class AVLTree(BinaryTree):
     def __init__(self):
@@ -115,8 +112,7 @@ class AVLTree(BinaryTree):
 
         if balance < -1 and value < node.right.value:
             return self.RL_rotate(node)
-
-        return node
+        return node # success
 
     def search(self, node, value):
         current = node
